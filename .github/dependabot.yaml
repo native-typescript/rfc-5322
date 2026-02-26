@@ -3,6 +3,15 @@ updates:
   - commit-message:
       prefix: "chore: "
     directory: "/"
+    package-ecosystem: "devcontainers"
+    pull-request-branch-name:
+      separator: "-"
+    schedule:
+      day: "saturday"
+      interval: "weekly"
+  - commit-message:
+      prefix: "chore: "
+    directory: "/"
     package-ecosystem: "github-actions"
     pull-request-branch-name:
       separator: "-"
