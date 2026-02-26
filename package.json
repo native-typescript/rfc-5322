@@ -1,0 +1,23 @@
+{
+	"author": {
+		"email": "goodheropl@gmail.com",
+		"name": "Rafał Majewski",
+		"url": "https://github.com/rafal-majewski"
+	},
+	"bugs": {
+		"url": "https://github.com/native-typescript/rfc-5322/issues"
+	},
+	"engines": {
+		"node": ">=24.14.0",
+		"npm": ">=11.9.0"
+	},
+	"homepage": "https://github.com/native-typescript/rfc-5322#readme",
+	"name": "@native-typescript/rfc-5322",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/native-typescript/rfc-5322.git"
+	},
+	"scripts": {},
+	"type": "module",
+	"version": "7.0.0"
+}

@@ -12,6 +12,7 @@
 	"otherPortsAttributes": {},
 	"overrideCommand": true,
 	"portsAttributes": {},
+	"postCreateCommand": "npm clean-install",
 	"privileged": false,
 	"remoteEnv": {},
 	"remoteUser": "developer",
