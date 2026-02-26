@@ -1,4 +1,8 @@
-registries: {}
+registries:
+  npm_registry:
+    token: "${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}"
+    type: "npm-registry"
+    url: "https://registry.npmjs.org"
 updates:
   - commit-message:
       prefix: "chore: "
@@ -17,5 +21,16 @@ updates:
       separator: "-"
     schedule:
       day: "sunday"
+      interval: "weekly"
+  - commit-message:
+      prefix: "chore: "
+    directory: "/"
+    package-ecosystem: "npm"
+    pull-request-branch-name:
+      separator: "-"
+    registries:
+      - "npm_registry"
+    schedule:
+      day: "monday"
       interval: "weekly"
 version: 2
