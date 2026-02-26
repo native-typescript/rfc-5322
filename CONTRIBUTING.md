@@ -12,6 +12,7 @@
 - [package-lock.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json) - [npm](https://www.npmjs.com) lock;
 - [package.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-json) - Configuration of the [Node.js](https://nodejs.org) project;
 - [README.md](https://en.wikipedia.org/wiki/README);
+- [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) - Configuration of [TypeScript](https://www.typescriptlang.org);
 
 ## Development setup
 
@@ -21,3 +22,17 @@
 2. Connect to the development container;
 
 ## Developing
+
+### TypeScript
+
+[TypeScript](https://www.typescriptlang.org) is used for development.
+
+#### Checking
+
+Run
+
+```
+npm run typescript:check
+```
+
+to perform type checking.
