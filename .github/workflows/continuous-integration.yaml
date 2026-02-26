@@ -1,4 +1,5 @@
-env: {}
+env:
+  NODE_JS__VERSION: "24.14.0"
 jobs: {}
 name: "Continuous integration"
 on:
