@@ -7,6 +7,10 @@
 	"bugs": {
 		"url": "https://github.com/native-typescript/rfc-5322/issues"
 	},
+	"devDependencies": {
+		"@types/node": "25.5.0",
+		"typescript": "5.9.3"
+	},
 	"engines": {
 		"node": ">=24.14.0",
 		"npm": ">=11.9.0"
@@ -17,7 +21,9 @@
 		"type": "git",
 		"url": "git+https://github.com/native-typescript/rfc-5322.git"
 	},
-	"scripts": {},
+	"scripts": {
+		"typescript:check": "tsc"
+	},
 	"type": "module",
 	"version": "4.0.0"
 }
