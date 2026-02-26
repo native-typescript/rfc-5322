@@ -19,3 +19,5 @@
    open the project. The editor will automatically set up a development
    environment with all the necessary dependencies and tools;
 2. Connect to the development container;
+
+## Developing
