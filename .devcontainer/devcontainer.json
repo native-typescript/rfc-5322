@@ -2,7 +2,11 @@
 	"capAdd": [],
 	"containerEnv": {},
 	"containerUser": "developer",
-	"customizations": {"vscode": {"extensions": ["dbaeumer.vscode-eslint"]}},
+	"customizations": {
+		"vscode": {
+			"extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+		}
+	},
 	"dockerComposeFile": ["./docker-compose.yaml"],
 	"features": {},
 	"forwardPorts": [],
