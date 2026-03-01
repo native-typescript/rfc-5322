@@ -129,6 +129,16 @@ Tests can be configured via [environment variables](https://en.wikipedia.org/wik
 
 ##### List
 
+#### Checking
+
+Run
+
+```
+npm run test:check
+```
+
+to perform testing for all tests.
+
 ### TypeScript
 
 [TypeScript](https://www.typescriptlang.org) is used for development.
