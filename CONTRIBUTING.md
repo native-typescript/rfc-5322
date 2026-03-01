@@ -19,6 +19,7 @@
 - [release-it.config.ts](https://github.com/release-it/release-it/blob/main/docs/configuration.md#configuration) - Configuration of [release-it](https://github.com/release-it/release-it);
 - testing - Testing code;
   - core - Core modules;
+  - entrypoint-of-testing.ts - Global setup and teardown for tests;
   - index.ts - Index of testing code;
   - instances - Instances of core modules;
   - tests - General tests;

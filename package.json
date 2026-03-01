@@ -43,8 +43,8 @@
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"release-it": "release-it --config='./release-it.config.ts'",
-		"test:check": "node --experimental-test-coverage --test --test-concurrency=1 --test-coverage-exclude='**/*.test.*' --test-coverage-exclude='node_modules/**/*' --test-coverage-exclude='testing/**/*' '**/*.test.ts'",
-		"test:check:unit": "node --test '**/*.unit.test.ts'",
+		"test:check": "node --experimental-test-coverage --test --test-concurrency=1 --test-coverage-exclude='**/*.test.*' --test-coverage-exclude='node_modules/**/*' --test-coverage-exclude='testing/**/*' --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.test.ts'",
+		"test:check:unit": "node --test --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.unit.test.ts'",
 		"typescript:check": "tsc"
 	},
 	"type": "module",
