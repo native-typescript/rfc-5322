@@ -567,7 +567,25 @@ export default [
 			"import-x/no-named-as-default-member": [`warn`],
 			"import-x/no-named-default": [`warn`],
 			"import-x/no-relative-packages": [`warn`],
-			"import-x/no-restricted-paths": [`error`],
+			"import-x/no-restricted-paths": [
+				`error`,
+				{
+					zones: [
+						{
+							except: [],
+							from: `./!(node_modules|source|testing)/**/*`,
+							message: `The testing code should not import non-source code or non-testing code.`,
+							target: `./testing/**/*`,
+						},
+						{
+							except: [],
+							from: `./**/*.test.ts`,
+							message: `Test suites should not be imported.`,
+							target: `./**/*.ts`,
+						},
+					],
+				},
+			],
 			"import-x/no-self-import": [`warn`],
 			"import-x/no-unassigned-import": [`warn`, {allow: []}],
 			"import-x/no-useless-path-segments": [`warn`, {noUselessIndex: false}],
