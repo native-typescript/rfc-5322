@@ -43,6 +43,7 @@
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"release-it": "release-it --config='./release-it.config.ts'",
+		"test:check": "node --experimental-test-coverage --test --test-concurrency=1 --test-coverage-exclude='**/*.test.*' --test-coverage-exclude='node_modules/**/*' --test-coverage-exclude='testing/**/*' '**/*.test.ts'",
 		"typescript:check": "tsc"
 	},
 	"type": "module",
