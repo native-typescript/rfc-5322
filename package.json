@@ -37,16 +37,16 @@
 		"url": "git+https://github.com/native-typescript/rfc-5322.git"
 	},
 	"scripts": {
-		"commitlint:check:last": "commitlint --last --strict",
-		"commitlint:check:range": "commitlint --strict",
-		"eslint:check": "eslint --max-warnings=0 .",
-		"eslint:fix": "eslint --fix --max-warnings=0 .",
-		"prettier:check": "prettier --check .",
-		"prettier:fix": "prettier --write .",
-		"release-it": "release-it --config='./release-it.config.ts'",
-		"test:check": "node --experimental-test-coverage --test --test-concurrency=1 --test-coverage-exclude='**/*.test.*' --test-coverage-exclude='node_modules/**/*' --test-coverage-exclude='testing/**/*' --test-coverage-include='source/**/*' --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.test.ts'",
-		"test:check:unit": "node --test --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.unit.test.ts'",
-		"typescript:check": "tsc"
+		"commitlint:check:last": "node --env-file-if-exists='./.env' ./node_modules/.bin/commitlint --last --strict",
+		"commitlint:check:range": "node --env-file-if-exists='./.env' ./node_modules/.bin/commitlint --strict",
+		"eslint:check": "node --env-file-if-exists='./.env' ./node_modules/.bin/eslint --max-warnings=0 .",
+		"eslint:fix": "node --env-file-if-exists='./.env' ./node_modules/.bin/eslint --fix --max-warnings=0 .",
+		"prettier:check": "node --env-file-if-exists='./.env' ./node_modules/.bin/prettier --check .",
+		"prettier:fix": "node --env-file-if-exists='./.env' ./node_modules/.bin/prettier --write .",
+		"release-it": "node --env-file-if-exists='./.env' ./node_modules/.bin/release-it --config='./release-it.config.ts'",
+		"test:check": "node --env-file-if-exists='./.env' --experimental-test-coverage --test --test-concurrency=1 --test-coverage-exclude='**/*.test.*' --test-coverage-exclude='node_modules/**/*' --test-coverage-exclude='testing/**/*' --test-coverage-include='source/**/*' --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.test.ts'",
+		"test:check:unit": "node --env-file-if-exists='./.env' --test --test-global-setup='./testing/entrypoint-of-testing.ts' '**/*.unit.test.ts'",
+		"typescript:check": "node --env-file-if-exists='./.env' ./node_modules/.bin/tsc"
 	},
 	"type": "module",
 	"version": "4.0.0"
