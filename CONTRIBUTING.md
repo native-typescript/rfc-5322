@@ -119,6 +119,10 @@ npm run release-it
 
 to make a release.
 
+### Testing
+
+Tests are using [the native Node.js test runner](https://nodejs.org/api/test.html).
+
 ### TypeScript
 
 [TypeScript](https://www.typescriptlang.org) is used for development.
