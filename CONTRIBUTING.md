@@ -123,6 +123,12 @@ to make a release.
 
 Tests are using [the native Node.js test runner](https://nodejs.org/api/test.html).
 
+#### Environment variables
+
+Tests can be configured via [environment variables](https://en.wikipedia.org/wiki/Environment_variable).
+
+##### List
+
 ### TypeScript
 
 [TypeScript](https://www.typescriptlang.org) is used for development.
