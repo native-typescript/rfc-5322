@@ -16,6 +16,7 @@
 - [package.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-json) - Configuration of the [Node.js](https://nodejs.org) project;
 - [prettier.config.ts](https://prettier.io/docs/configuration) - Configuration of [Prettier](https://prettier.io);
 - [README.md](https://en.wikipedia.org/wiki/README);
+- [release-it.config.ts](https://github.com/release-it/release-it/blob/main/docs/configuration.md#configuration) - Configuration of [release-it](https://github.com/release-it/release-it);
 - [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) - Configuration of [TypeScript](https://www.typescriptlang.org);
 
 ## Development setup
@@ -98,6 +99,20 @@ npm run prettier:fix
 ```
 
 to automatically format the codebase. You should have your editor set up to format on save as well.
+
+### release-it
+
+[release-it](https://github.com/release-it/release-it) is used for creating releases.
+
+#### Running
+
+Run
+
+```
+npm run release-it
+```
+
+to make a release.
 
 ### TypeScript
 
