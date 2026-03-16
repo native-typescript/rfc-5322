@@ -10,6 +10,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "20.5.0",
 		"@commitlint/types": "20.5.0",
+		"@release-it/conventional-changelog": "10.0.6",
 		"@stylistic/eslint-plugin": "5.10.0",
 		"@types/node": "25.5.0",
 		"@typescript-eslint/parser": "8.57.2",
@@ -19,6 +20,7 @@
 		"eslint-plugin-unused-imports": "4.4.1",
 		"jiti": "2.6.1",
 		"prettier": "3.8.1",
+		"release-it": "19.2.4",
 		"typescript": "5.9.3",
 		"typescript-eslint": "8.57.2"
 	},
@@ -39,6 +41,7 @@
 		"eslint:fix": "eslint --fix --max-warnings=0 .",
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
+		"release-it": "release-it --config='./release-it.config.ts'",
 		"typescript:check": "tsc"
 	},
 	"type": "module",
