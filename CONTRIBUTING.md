@@ -8,6 +8,7 @@
 - [.gitignore](https://git-scm.com/docs/gitignore);
 - [.prettierignore](https://prettier.io/docs/ignore.html);
 - [.vscode](https://code.visualstudio.com/docs/configure/settings#_workspace-settings) - Configuration of [Visual Studio Code](https://code.visualstudio.com);
+- [commitlint.config.ts](https://commitlint.js.org/reference/configuration.html#config-via-file) - Configuration of [commitlint](https://commitlint.js.org);
 - [CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors);
 - [eslint.config.ts](https://eslint.org/docs/latest/use/configure/configuration-files) - Configuration of [ESLint](https://eslint.org);
 - node_modules - [Node.js](https://nodejs.org) dependencies;
@@ -25,6 +26,30 @@
 2. Connect to the development container;
 
 ## Developing
+
+### commitlint
+
+[commitlint](https://commitlint.js.org) is used for linting commit messages.
+
+#### Last commit
+
+Run
+
+```
+npm run commitlint:check:last
+```
+
+to lint the latest commit message.
+
+#### Range of commits
+
+Run
+
+```
+npm run commitlint:check:range -- --from=${FROM} --to=${TO}
+```
+
+to lint the commit messages in the specified range. The `FROM` and `TO` variables are commit references that specify the range of commits to lint.
 
 ### ESLint
 
