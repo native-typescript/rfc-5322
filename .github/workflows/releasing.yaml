@@ -1,0 +1,68 @@
+env:
+  NODE_JS__VERSION: "24.14.0"
+jobs:
+  publish_to_npm_registry:
+    name: "Publish to npm registry"
+    needs:
+      - "release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Download release"
+        uses: "robinraju/release-downloader@v1.12"
+        with:
+          tag: "${{needs.release.outputs.release_version}}"
+          tarBall: true
+      - name: "Unpack release"
+        run: |
+          tar -xzf ./${{github.event.repository.name}}-${{needs.release.outputs.release_version}}.tar.gz
+          rm ./${{github.event.repository.name}}-${{needs.release.outputs.release_version}}.tar.gz
+      - name: "Move the files to the current directory"
+        run: |
+          shopt -s dotglob
+          mv ./${{github.event.repository.owner.login}}-${{github.event.repository.name}}-*/* ./
+          shopt -u dotglob
+          rm -rf ./${{github.event.repository.owner.login}}-${{github.event.repository.name}}-*/
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v6.3.0"
+        with:
+          node-version: "${{env.NODE_JS__VERSION}}"
+      - name: "Publish to the npm registry"
+        run: |
+          npm publish --access=public --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
+  release:
+    name: "Release"
+    outputs:
+      release_version: "${{steps.remember_release_version.outputs.release_version}}"
+    permissions:
+      contents: "write"
+      pull-requests: "write"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout the repository"
+        uses: "actions/checkout@v6.0.2"
+        with:
+          fetch-depth: 0
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v6.3.0"
+        with:
+          cache: "npm"
+          node-version: "${{env.NODE_JS__VERSION}}"
+      - name: "Configure Git"
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: "Install the dependencies"
+        run: |
+          npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
+      - env:
+          GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
+        name: "Release"
+        run: |
+          npm run release-it -- --ci --verbose
+      - id: "remember_release_version"
+        name: "Remember the release version"
+        run: |
+          echo "release_version=$(npm pkg get version | tr -d '"')" >> $GITHUB_OUTPUT
+name: "Releasing"
+on:
+  workflow_dispatch:
