@@ -1,6 +1,34 @@
 env:
   NODE_JS__VERSION: "24.14.0"
 jobs:
+  commitlint_check:
+    name: "commitlint check"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout the repository"
+        uses: "actions/checkout@v6.0.2"
+        with:
+          fetch-depth: 0
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v6.3.0"
+        with:
+          cache: "npm"
+          node-version: "${{env.NODE_JS__VERSION}}"
+      - name: "Install the dependencies"
+        run: |
+          npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
+      - if: "${{github.event_name == 'pull_request'}}"
+        name: "Configure Git"
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - if: "${{github.event_name == 'pull_request'}}"
+        name: "Add a dummy commit with the pull request title as the commit message"
+        run: |
+          git commit --allow-empty --message "${{github.event.pull_request.title}}"
+      - name: "Run the commitlint check"
+        run: |
+          npm run commitlint:check:last
   eslint_check:
     name: "ESLint check"
     runs-on: "ubuntu-latest"
