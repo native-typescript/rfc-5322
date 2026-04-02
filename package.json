@@ -8,8 +8,16 @@
 		"url": "https://github.com/native-typescript/rfc-5322/issues"
 	},
 	"devDependencies": {
+		"@stylistic/eslint-plugin": "5.10.0",
 		"@types/node": "25.5.0",
-		"typescript": "5.9.3"
+		"@typescript-eslint/parser": "8.57.2",
+		"eslint": "10.2.0",
+		"eslint-plugin-import-x": "4.16.2",
+		"eslint-plugin-perfectionist": "5.8.0",
+		"eslint-plugin-unused-imports": "4.4.1",
+		"jiti": "2.6.1",
+		"typescript": "5.9.3",
+		"typescript-eslint": "8.57.2"
 	},
 	"engines": {
 		"node": ">=24.14.0",
@@ -22,6 +30,8 @@
 		"url": "git+https://github.com/native-typescript/rfc-5322.git"
 	},
 	"scripts": {
+		"eslint:check": "eslint --max-warnings=0 .",
+		"eslint:fix": "eslint --fix --max-warnings=0 .",
 		"typescript:check": "tsc"
 	},
 	"type": "module",
