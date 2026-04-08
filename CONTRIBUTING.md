@@ -12,6 +12,7 @@
 - [commitlint.config.ts](https://commitlint.js.org/reference/configuration.html#config-via-file) - Configuration of [commitlint](https://commitlint.js.org);
 - [CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors);
 - [eslint.config.ts](https://eslint.org/docs/latest/use/configure/configuration-files) - Configuration of [ESLint](https://eslint.org);
+- index.ts - Index of the project;
 - node_modules - [Node.js](https://nodejs.org) dependencies;
 - [package-lock.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json) - [npm](https://www.npmjs.com) lock;
 - [package.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-json) - Configuration of the [Node.js](https://nodejs.org) project;
@@ -19,6 +20,7 @@
 - [README.md](https://en.wikipedia.org/wiki/README);
 - [release-it.config.ts](https://github.com/release-it/release-it/blob/main/docs/configuration.md#configuration) - Configuration of [release-it](https://github.com/release-it/release-it);
 - source - Source code;
+  - index.ts - Index of source code;
 - testing - Testing code;
   - core - Core modules;
   - entrypoint-of-testing.ts - Global setup and teardown for tests;
