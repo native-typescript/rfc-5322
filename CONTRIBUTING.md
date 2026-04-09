@@ -6,6 +6,7 @@
 - .git - Metadata of the [Git](https://git-scm.com) repository;
 - .github - Configuration of [GitHub](https://github.com);
 - [.gitignore](https://git-scm.com/docs/gitignore);
+- [.npmignore](https://docs.npmjs.com/cli/v7/configuring-npm/npmignore);
 - [.prettierignore](https://prettier.io/docs/ignore.html);
 - [.vscode](https://code.visualstudio.com/docs/configure/settings#_workspace-settings) - Configuration of [Visual Studio Code](https://code.visualstudio.com);
 - [commitlint.config.ts](https://commitlint.js.org/reference/configuration.html#config-via-file) - Configuration of [commitlint](https://commitlint.js.org);
