@@ -26,7 +26,9 @@ jobs:
         name: "Add a dummy commit with the pull request title as the commit message"
         run: |
           git commit --allow-empty --message "${{github.event.pull_request.title}}"
-      - name: "Run the commitlint check"
+      - env:
+          NODE_OPTIONS: "--import=@native-typescript/loader-of-typescript-for-node-js"
+        name: "Run the commitlint check"
         run: |
           npm run commitlint:check:last
   eslint_check:
@@ -43,7 +45,9 @@ jobs:
       - name: "Install the dependencies"
         run: |
           npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
-      - name: "Run the ESLint check"
+      - env:
+          NODE_OPTIONS: "--import=@native-typescript/loader-of-typescript-for-node-js"
+        name: "Run the ESLint check"
         run: |
           npm run eslint:check
   prettier_check:
@@ -60,7 +64,9 @@ jobs:
       - name: "Install the dependencies"
         run: |
           npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
-      - name: "Run the Prettier check"
+      - env:
+          NODE_OPTIONS: "--import=@native-typescript/loader-of-typescript-for-node-js"
+        name: "Run the Prettier check"
         run: |
           npm run prettier:check
   test_check:
@@ -77,7 +83,9 @@ jobs:
       - name: "Install the dependencies"
         run: |
           npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
-      - name: "Run the test check"
+      - env:
+          NODE_OPTIONS: "--import=@native-typescript/loader-of-typescript-for-node-js"
+        name: "Run the test check"
         run: |
           npm run test:check
   typescript_check:
@@ -94,7 +102,9 @@ jobs:
       - name: "Install the dependencies"
         run: |
           npm ci --registry=https://registry.npmjs.org --//registry.npmjs.org/:_authToken=${{secrets.NPM__REGISTRY__ACCESS_TOKEN}}
-      - name: "Run the TypeScript check"
+      - env:
+          NODE_OPTIONS: "--import=@native-typescript/loader-of-typescript-for-node-js"
+        name: "Run the TypeScript check"
         run: |
           npm run typescript:check
 name: "Continuous integration"
