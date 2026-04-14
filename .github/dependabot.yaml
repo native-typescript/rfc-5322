@@ -1,3 +1,12 @@
 registries: {}
-updates: []
+updates:
+  - commit-message:
+      prefix: "chore: "
+    directory: "/"
+    package-ecosystem: "github-actions"
+    pull-request-branch-name:
+      separator: "-"
+    schedule:
+      day: "sunday"
+      interval: "weekly"
 version: 2
