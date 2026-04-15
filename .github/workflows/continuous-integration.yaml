@@ -1,0 +1,11 @@
+env: {}
+jobs: {}
+name: "Continuous integration"
+on:
+  pull_request:
+    types:
+      - "edited"
+      - "opened"
+      - "reopened"
+      - "synchronize"
+  push:
