@@ -7,6 +7,10 @@
 	"bugs": {
 		"url": "https://github.com/native-typescript/rfc-5322/issues"
 	},
+	"dependencies": {
+		"@types/rfc2047": "2.0.3",
+		"rfc2047": "4.0.1"
+	},
 	"description": "An implementation of RFC 5322 in TypeScript.",
 	"devDependencies": {
 		"@commitlint/cli": "20.5.0",
