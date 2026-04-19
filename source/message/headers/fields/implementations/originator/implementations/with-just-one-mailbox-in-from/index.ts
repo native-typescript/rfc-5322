@@ -1,0 +1,1 @@
+export {WithJustOneMailboxInFromOriginatorFieldsOfHeadersOfMessage} from "./WithJustOneMailboxInFromOriginatorFieldsOfHeadersOfMessage.ts";
