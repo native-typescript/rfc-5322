@@ -1,0 +1,7 @@
+import type {
+	WithJustOneMailboxInFromOriginatorFieldsOfHeadersOfMessage,
+	WithMoreThanOneMailboxInFromOriginatorFieldsOfHeadersOfMessage,
+} from "../implementations/index.ts";
+export type SupportedOriginatorFieldsOfHeadersOfMessage =
+	| WithJustOneMailboxInFromOriginatorFieldsOfHeadersOfMessage
+	| WithMoreThanOneMailboxInFromOriginatorFieldsOfHeadersOfMessage;
