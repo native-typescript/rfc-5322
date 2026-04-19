@@ -7,6 +7,9 @@
 	"bugs": {
 		"url": "https://github.com/native-typescript/rfc-5322/issues"
 	},
+	"dependencies": {
+		"rfc2047": "4.0.1"
+	},
 	"description": "An implementation of RFC 5322 in TypeScript.",
 	"devDependencies": {
 		"@commitlint/cli": "20.5.0",
@@ -15,6 +18,7 @@
 		"@release-it/conventional-changelog": "10.0.6",
 		"@stylistic/eslint-plugin": "5.10.0",
 		"@types/node": "25.5.0",
+		"@types/rfc2047": "2.0.3",
 		"@typescript-eslint/parser": "8.57.2",
 		"eslint": "10.2.0",
 		"eslint-plugin-import-x": "4.16.2",
