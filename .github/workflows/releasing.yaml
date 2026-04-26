@@ -8,7 +8,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Download release"
-        uses: "robinraju/release-downloader@v1.12"
+        uses: "robinraju/release-downloader@v1.13"
         with:
           tag: "${{needs.release.outputs.release_version}}"
           tarBall: true
