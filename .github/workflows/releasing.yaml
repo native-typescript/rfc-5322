@@ -23,7 +23,7 @@ jobs:
           shopt -u dotglob
           rm -rf ./${{github.event.repository.owner.login}}-${{github.event.repository.name}}-*/
       - name: "Setup Node.js"
-        uses: "actions/setup-node@v6.3.0"
+        uses: "actions/setup-node@v6.4.0"
         with:
           node-version: "${{env.NODE_JS__VERSION}}"
       - name: "Publish to the npm registry"
@@ -43,7 +43,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Setup Node.js"
-        uses: "actions/setup-node@v6.3.0"
+        uses: "actions/setup-node@v6.4.0"
         with:
           cache: "npm"
           node-version: "${{env.NODE_JS__VERSION}}"
