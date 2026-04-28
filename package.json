@@ -13,7 +13,7 @@
 	},
 	"description": "An implementation of RFC 5322 in TypeScript.",
 	"devDependencies": {
-		"@commitlint/cli": "20.5.0",
+		"@commitlint/cli": "20.5.2",
 		"@commitlint/types": "20.5.0",
 		"@native-typescript/loader-of-typescript-for-node-js": "1.0.0",
 		"@release-it/conventional-changelog": "10.0.6",
