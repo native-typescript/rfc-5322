@@ -55,5 +55,5 @@
 		"typescript:check": "node --env-file-if-exists='./.env' ./node_modules/.bin/tsc"
 	},
 	"type": "module",
-	"version": "10.0.0"
+	"version": "11.0.0"
 }
